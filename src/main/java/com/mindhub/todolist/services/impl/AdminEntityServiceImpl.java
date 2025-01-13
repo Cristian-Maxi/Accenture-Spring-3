@@ -31,7 +31,7 @@ public class AdminEntityServiceImpl implements IAdminEntityService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public AdminEntityResponseDTO saveCAdminEntity(AdminEntityRequestDTO adminEntityRequestDTO) {
+    public AdminEntityResponseDTO savedminEntity(AdminEntityRequestDTO adminEntityRequestDTO) {
         if (userEntityRepository.existsByEmail(adminEntityRequestDTO.user().getEmail())) {
             throw new ApplicationException("email", "El email ya existe en la base de datos");
         }
