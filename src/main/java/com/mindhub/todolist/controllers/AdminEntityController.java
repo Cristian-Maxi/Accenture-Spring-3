@@ -22,7 +22,7 @@ public class AdminEntityController {
     @Operation(summary = "Se registra un admin")
     public ResponseEntity<AdminEntityResponseDTO> createAdminEntity(@Valid @RequestBody AdminEntityRequestDTO adminEntityRequestDTO) {
         try{
-            AdminEntityResponseDTO adminEntityResponseDTO = adminEntityService.saveCAdminEntity(adminEntityRequestDTO);
+            AdminEntityResponseDTO adminEntityResponseDTO = adminEntityService.savedminEntity(adminEntityRequestDTO);
             return new ResponseEntity<>(adminEntityResponseDTO, HttpStatus.CREATED);
         } catch (ApplicationException e) {
             throw new ApplicationException(" Ha ocurrido un error en el campo " + e.getCampo() + ", Descripcion: "+e.getMessage());

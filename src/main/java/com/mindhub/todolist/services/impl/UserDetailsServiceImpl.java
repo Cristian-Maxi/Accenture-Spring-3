@@ -2,6 +2,7 @@ package com.mindhub.todolist.services.impl;
 
 import com.mindhub.todolist.models.UserEntity;
 import com.mindhub.todolist.repositories.IUserEntityRepository;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -33,5 +34,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 userEntity.isCredentialNoExpired(),
                 userEntity.isAccountNoLocked(),
                 List.of(new SimpleGrantedAuthority(userEntity.getRol().name())));
+                //AuthorityUtils.createAuthorityList(userEntity.getRol().toString()));
     }
 }

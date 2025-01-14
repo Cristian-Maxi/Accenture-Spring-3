@@ -37,6 +37,7 @@ public class UserEntityController {
     }
 
     @GetMapping("/findUserTasks/{id}")
+    @Operation(summary = "Trae todas las tareas de un usuario en particular")
     public ResponseEntity<ApiResponseDTO<UserEntityTasksResponseDTO>> findUserTasksById(@PathVariable Long id) {
         UserEntityTasksResponseDTO userTasks = userEntityService.userTasks(id);
         String message = "Usuario y Tareas encontradas";
