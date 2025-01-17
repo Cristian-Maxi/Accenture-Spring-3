@@ -1,6 +1,7 @@
 package com.mindhub.todolist.services.impl;
 
 import com.mindhub.todolist.dtos.TaskEntityDTO.*;
+import com.mindhub.todolist.enums.Status;
 import com.mindhub.todolist.mappers.TaskEntityMapper;
 import com.mindhub.todolist.models.TaskEntity;
 import com.mindhub.todolist.repositories.ITaskEntityRepository;
